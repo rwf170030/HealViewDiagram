@@ -21,10 +21,13 @@ with Diagram("HealView Project System Diagram", show=True):
 
     # From: MathWorks
     #Matlab = Custom("MATLAB Code", "./my_resources/Matlab_Logo.png")
+
+    #!!! Order that these are initialized is the order that they show up on the render
     with Cluster("Main Menu"):
         # From: https://tabler-icons.io/
-        Folder = Custom("Folder Selection", "./my_resources/folder-plus.png")
+        
         Question = Custom("Guide", "./my_resources/question-mark.png")
+        Folder = Custom("Folder Selection", "./my_resources/folder-plus.png")
 
         # From: MRTK
         Toolkit = Custom("Toolkit", "./my_resources/toolkit_icon.png")
