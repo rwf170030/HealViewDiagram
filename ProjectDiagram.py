@@ -22,6 +22,14 @@ with Diagram("HealView Project System Diagram", show=True):
     # From: MathWorks
     #Matlab = Custom("MATLAB Code", "./my_resources/Matlab_Logo.png")
 
+    #From: K-wave
+    KWave = Custom("Focus Ultrasound Simulation", "./my_resources/k-wave_banner.png")
+    
+    
+    Options = Custom("Settings", "./my_resources/settings_icon.png")
+
+    KWave >> Options
+    
     #!!! Order that these are initialized is the order that they show up on the render
     with Cluster("Main Menu"):
         # From: https://tabler-icons.io/
@@ -37,12 +45,10 @@ with Diagram("HealView Project System Diagram", show=True):
             Info = Custom("Information Menu", "./my_resources/info-circle.png")
             Mode = Custom("Mode Selection", "./my_resources/circle-half-2.png")
 
-            # From: MRTK
-            Options = Custom("Settings", "./my_resources/settings_icon.png")
 
             
-            
-
+    
+    
 
     
     Folder >> Mode >> Options >> Mesh
@@ -50,6 +56,7 @@ with Diagram("HealView Project System Diagram", show=True):
     Folder >> Info
     Mode >> Info
 
+    
 
 
 
